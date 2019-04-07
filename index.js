@@ -12,6 +12,7 @@ async function listStories() {
         let typeHtml = `<h3>${storyType}</h3>`;
         for (const { threadId } of index[storyType]) {
             typeHtml += `<a href="/story/threads/${threadId}.html" id="threadLink${threadId}">${threadId}</a><br>`;
+            convertToTitle(threadId);
         }
         storyList.innerHTML += typeHtml;
     }
