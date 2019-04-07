@@ -11,7 +11,7 @@ async function listStories() {
     for (const storyType of Object.keys(index)) {
         let typeHtml = `<h3>${storyType}</h3>`;
         for (const { threadId, board } of index[storyType]) {
-            typeHtml += `<a href="/story/threads/${threadId}.html" id="threadLink${threadId}">&gt;&gt;${board}/${threadId}</a><br>`;
+            typeHtml += `<a href="/story/threads/${threadId}.html" id="threadLink${threadId}">&gt;&gt;/${board}/${threadId}</a><br>`;
             convertToTitle(threadId);
         }
         storyList.innerHTML += typeHtml;
